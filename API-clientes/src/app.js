@@ -14,7 +14,7 @@
 const {MESSAGE_ERROR, MESSAGE_SUCESS}= require('../modulo/config.js')
 const {request, response} = require('express')
 const app = express()
-
+const routes = Router();
 //Configuração de cors para liberar o acesso a API
 app.use((request, response,next) => {
     response.header ('Access-Control-Allow-Origin', '*')
@@ -32,7 +32,7 @@ const jsonParser = bodyParser.json()
 *****************************************************************/
 
 //EndPoint para listar todas as pizzas
-app.get('/v1/allpizzas', cors(), async function (request, response){
+routes.get('/v1/allpizzas', cors(), async function (request, response){
     
     let statusCode
     let message
@@ -55,7 +55,7 @@ app.get('/v1/allpizzas', cors(), async function (request, response){
     response.json(message)
 })
 //EndPoint para listar todas as bebidas
-app.get('/v1/allbebidas', cors(), async function (request, response){
+routes.get('/v1/allbebidas', cors(), async function (request, response){
     
     let statusCode
     let message
@@ -78,7 +78,7 @@ app.get('/v1/allbebidas', cors(), async function (request, response){
     response.json(message)
 })
 //EndPoint para listar todas as promocoes
-app.get('/v1/allpromocoes', cors(), async function (request, response){
+routes.get('/v1/allpromocoes', cors(), async function (request, response){
     
     let statusCode
     let message
@@ -102,7 +102,7 @@ app.get('/v1/allpromocoes', cors(), async function (request, response){
 })
 
 //EndPoint para exibir as pizzas favoritas
-app.get('/v1/pizza/favoritas', cors(), async function (request, response){
+routes.get('/v1/pizza/favoritas', cors(), async function (request, response){
     
     let statusCode
     let message
@@ -126,7 +126,7 @@ app.get('/v1/pizza/favoritas', cors(), async function (request, response){
 })
 
 //EndPoint responsavel pela favoritação de uma pizza
-app.put('/v1/pizza/favoritar/:id', cors(), jsonParser, async function (request, response){
+routes.put('/v1/pizza/favoritar/:id', cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -167,7 +167,7 @@ app.put('/v1/pizza/favoritar/:id', cors(), jsonParser, async function (request, 
 *    Data: 11/12/2022                                           *
 *****************************************************************/
 //EndPoint para inserir um novo cliente
-app.post('/v1/cliente', cors(), jsonParser, async function (request, response){
+routes.post('/v1/cliente', cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -196,7 +196,8 @@ app.post('/v1/cliente', cors(), jsonParser, async function (request, response){
     response.json(message)
 })
    
-
-app.listen(1313, function(){
+app.use('/.netlify/functions/api',routes);
+module.exports = app
+/*app.listen(1313, function(){
     console.log('Servidor aguardando requisições')
-})
+})*/
