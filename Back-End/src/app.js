@@ -14,9 +14,10 @@
 const {MESSAGE_ERROR, MESSAGE_SUCESS}= require('../modulo/config.js')
 const {request, response} = require('express')
 const app = express()
+const routes = Router();
 
 //Configuração de cors para liberar o acesso a API
-app.use((request, response,next) => {
+routes.use((request, response,next) => {
     response.header ('Access-Control-Allow-Origin', '*')
     response.header ('Access-Control-Allow-Methods',' GET, PUT, POST, DELETE, OPTIONS')
     app.use(cors())
@@ -40,7 +41,7 @@ const verifyJWT = async function (request, response, next){
         return response.status(401).end()
     
 }
-app.post('/v1/funcionario/login', cors(), jsonParser, async (request, response, next) => {
+routes.post('/v1/funcionario/login', cors(), jsonParser, async (request, response, next) => {
  
     let headerContentType = request.headers['content-type']
     let statusCode
@@ -74,7 +75,7 @@ app.post('/v1/funcionario/login', cors(), jsonParser, async (request, response, 
     response.json(message)
 
 })
-app.post('/v1/funcionario', cors(), jsonParser, async function (request, response){
+routes.post('/v1/funcionario', cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -111,7 +112,7 @@ app.post('/v1/funcionario', cors(), jsonParser, async function (request, respons
 *****************************************************************/
 
 //EndPoint para inserir uma nova pizza
-app.post('/v1/pizza', cors(), jsonParser, async function (request, response){
+routes.post('/v1/pizza', cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -141,7 +142,7 @@ app.post('/v1/pizza', cors(), jsonParser, async function (request, response){
     response.json(message)
 })
 //EndPoint para atualizar uma pizza existente
-app.put('/v1/pizza/:id', cors(), jsonParser, async function (request, response){
+routes.put('/v1/pizza/:id', cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -178,7 +179,7 @@ app.put('/v1/pizza/:id', cors(), jsonParser, async function (request, response){
     response.json(message)
 })
 //EndPoint para listar todas as pizzas
-app.get('/v1/pizzas', cors(), async function (request, response){
+routes.get('/v1/pizzas', cors(), async function (request, response){
     
     let statusCode
     let message
@@ -201,7 +202,7 @@ app.get('/v1/pizzas', cors(), async function (request, response){
     response.json(message)
 })
 //EndPoint para deletar uma pizza existente
-app.delete('/v1/pizza/:id',verifyJWT, cors(), jsonParser, async function (request, response){
+routes.delete('/v1/pizza/:id',verifyJWT, cors(), jsonParser, async function (request, response){
     let statusCode
     let message 
     let id = request.params.id
@@ -219,7 +220,7 @@ app.delete('/v1/pizza/:id',verifyJWT, cors(), jsonParser, async function (reques
     response.json(message)
 })
 //EndPoint para buscar uma pizza pelo id
-app.get('/v1/pizza/:id',verifyJWT, cors(), async function (request, response){
+routes.get('/v1/pizza/:id',verifyJWT, cors(), async function (request, response){
     
     let statusCode
     let message
@@ -248,7 +249,7 @@ app.get('/v1/pizza/:id',verifyJWT, cors(), async function (request, response){
 * Data: 07/12/2022                                              *
 *****************************************************************/
 //EndPoint para inserir um novo tamanho
-app.post('/v1/tamanho',cors(), jsonParser, async function (request, response){
+routes.post('/v1/tamanho',cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -276,7 +277,7 @@ app.post('/v1/tamanho',cors(), jsonParser, async function (request, response){
     response.json(message)
 })
 //EndPoint para atualizar um tamanho existente
-app.put('/v1/tamanho/:id', cors(), jsonParser, async function (request, response){
+routes.put('/v1/tamanho/:id', cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -313,7 +314,7 @@ app.put('/v1/tamanho/:id', cors(), jsonParser, async function (request, response
     response.json(message)
 })
 //EndPoint para buscar um tamanho pelo id
-app.get('/v1/tamanho/:id', cors(), async function (request, response){
+routes.get('/v1/tamanho/:id', cors(), async function (request, response){
     
     let statusCode
     let message
@@ -336,7 +337,7 @@ app.get('/v1/tamanho/:id', cors(), async function (request, response){
     response.json(message)
 })
 //EndPoint para listar todos os tamanhos
-app.get('/v1/tamanhos', cors(), async function (request, response){
+routes.get('/v1/tamanhos', cors(), async function (request, response){
     
     let statusCode
     let message
@@ -359,7 +360,7 @@ app.get('/v1/tamanhos', cors(), async function (request, response){
     response.json(message)
 })
 //EndPoint para deletar um tamanho existente
-app.delete('/v1/tamanho/:id', cors(), jsonParser, async function (request, response){
+routes.delete('/v1/tamanho/:id', cors(), jsonParser, async function (request, response){
     let statusCode
     let message 
     let id = request.params.id
@@ -382,7 +383,7 @@ app.delete('/v1/tamanho/:id', cors(), jsonParser, async function (request, respo
 * Data: 07/12/2022                                              *
 *****************************************************************/
 //EndPoint para inserir uma nova bebida
-app.post('/v1/bebida',verifyJWT, cors(), jsonParser, async function (request, response){
+routes.post('/v1/bebida',verifyJWT, cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -410,7 +411,7 @@ app.post('/v1/bebida',verifyJWT, cors(), jsonParser, async function (request, re
     response.json(message)
 })
 //EndPoint para atualizar uma bebida existente
-app.put('/v1/bebida/:id',verifyJWT, cors(), jsonParser, async function (request, response){
+routes.put('/v1/bebida/:id',verifyJWT, cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -447,7 +448,7 @@ app.put('/v1/bebida/:id',verifyJWT, cors(), jsonParser, async function (request,
     response.json(message)
 })
 //EndPoint para buscar uma bebida pelo id
-app.get('/v1/bebida/:id',verifyJWT, cors(), async function (request, response){
+routes.get('/v1/bebida/:id',verifyJWT, cors(), async function (request, response){
     
     let statusCode
     let message
@@ -470,7 +471,7 @@ app.get('/v1/bebida/:id',verifyJWT, cors(), async function (request, response){
     response.json(message)
 })
 //EndPoint para listar todos as bebidas
-app.get('/v1/bebidas',verifyJWT, cors(), async function (request, response){
+routes.get('/v1/bebidas',verifyJWT, cors(), async function (request, response){
     
     let statusCode
     let message
@@ -493,7 +494,7 @@ app.get('/v1/bebidas',verifyJWT, cors(), async function (request, response){
     response.json(message)
 })
 //EndPoint para deletar uma bebida existente
-app.delete('/v1/bebida/:id' ,verifyJWT, cors(), jsonParser, async function (request, response){
+routes.delete('/v1/bebida/:id' ,verifyJWT, cors(), jsonParser, async function (request, response){
     let statusCode
     let message 
     let id = request.params.id
@@ -516,7 +517,7 @@ app.delete('/v1/bebida/:id' ,verifyJWT, cors(), jsonParser, async function (requ
 * Data: 07/12/2022                                              *
 *****************************************************************/
 //EndPoint para inserir uma nova medida
-app.post('/v1/medida', cors(), jsonParser, async function (request, response){
+routes.post('/v1/medida', cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -544,7 +545,7 @@ app.post('/v1/medida', cors(), jsonParser, async function (request, response){
     response.json(message)
 })
 //EndPoint para atualizar uma medida existente
-app.put('/v1/medida/:id', cors(), jsonParser, async function (request, response){
+routes.put('/v1/medida/:id', cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -581,7 +582,7 @@ app.put('/v1/medida/:id', cors(), jsonParser, async function (request, response)
     response.json(message)
 })
 //EndPoint para buscar uma medida pelo id
-app.get('/v1/medida/:id', cors(), async function (request, response){
+routes.get('/v1/medida/:id', cors(), async function (request, response){
     
     let statusCode
     let message
@@ -604,7 +605,7 @@ app.get('/v1/medida/:id', cors(), async function (request, response){
     response.json(message)
 })
 //EndPoint para listar todos as medida
-app.get('/v1/medidas', cors(), async function (request, response){
+routes.get('/v1/medidas', cors(), async function (request, response){
     
     let statusCode
     let message
@@ -627,7 +628,7 @@ app.get('/v1/medidas', cors(), async function (request, response){
     response.json(message)
 })
 //EndPoint para deletar uma medida existente
-app.delete('/v1/medida/:id', cors(), jsonParser, async function (request, response){
+routes.delete('/v1/medida/:id', cors(), jsonParser, async function (request, response){
     let statusCode
     let message 
     let id = request.params.id
@@ -651,7 +652,7 @@ app.delete('/v1/medida/:id', cors(), jsonParser, async function (request, respon
 *****************************************************************/
 
 //EndPoint para inserir uma nova promocao
-app.post('/v1/promocao', cors(), jsonParser, async function (request, response){
+routes.post('/v1/promocao', cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -679,7 +680,7 @@ app.post('/v1/promocao', cors(), jsonParser, async function (request, response){
     response.json(message)
 })
 //EndPoint para atualizar uma promocao existente
-app.put('/v1/promocao/:id', cors(), jsonParser, async function (request, response){
+routes.put('/v1/promocao/:id', cors(), jsonParser, async function (request, response){
     let statusCode
     let message
     let headerContentType
@@ -716,7 +717,7 @@ app.put('/v1/promocao/:id', cors(), jsonParser, async function (request, respons
     response.json(message)
 })
 //EndPoint para buscar uma promocao pelo id
-app.get('/v1/promocao/:id', cors(), async function (request, response){
+routes.get('/v1/promocao/:id', cors(), async function (request, response){
     
     let statusCode
     let message
@@ -739,7 +740,7 @@ app.get('/v1/promocao/:id', cors(), async function (request, response){
     response.json(message)
 })
 //EndPoint para listar todos as promocoes
-app.get('/.netlify/functions/api/v1/promocoes', cors(), async function (request, response){
+routes.get('/v1/promocoes', cors(), async function (request, response){
     
     let statusCode
     let message
@@ -762,7 +763,7 @@ app.get('/.netlify/functions/api/v1/promocoes', cors(), async function (request,
     response.json(message)
 })
 //EndPoint para deletar uma promocao existente
-app.delete('/v1/promocao/:id', cors(), jsonParser, async function (request, response){
+routes.delete('/v1/promocao/:id', cors(), jsonParser, async function (request, response){
     let statusCode
     let message 
     let id = request.params.id
@@ -780,8 +781,6 @@ app.delete('/v1/promocao/:id', cors(), jsonParser, async function (request, resp
     response.json(message)
 })
 
-// app.listen(1313, function(){
-//     console.log('Servidor aguardando requisições')
-// })
 
+app.use('/.netlify/functions/api',routes);
 module.exports = app
