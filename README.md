@@ -148,11 +148,29 @@ Para entregar o seu projeto você deverá criar um Pull Request deste repositór
 
 
 ## Back-end
-- [ ] Deverá ser criada toda a documentação dos EndPoints da API do projeto utilizando Swagger.
-- [ ] A estrutura do projeto deverá obedecer ao padrão de projeto MVC, para facilitar o processo de documentação e manutenção do projeto.
-- [ ] Todos os EndPoints deverão estar funcionando no PostMan para testes e validação.
-- [ ] O projeto deverá ser publicado.
-
+- [x] Deverá ser criada toda a documentação dos EndPoints da API do projeto utilizando Swagger.
+- [x] A estrutura do projeto deverá obedecer ao padrão de projeto MVC, para facilitar o processo de documentação e manutenção do projeto.
+- [x] Todos os EndPoints deverão estar funcionando no PostMan para testes e validação.
+- [x] O projeto deverá ser publicado.
+      Obs: Apenas uma das APIs foram postaddas, que no caso foi a que apenas o dono do sistema tem acesso
 ---
+# La Fortezza Pizzaria
 
+<h1> Antony Gabriel & Caroline Santana </h1>
+
+<p> Projeto de um site de pizzaria com 5 seções e CMS (dashboard) </p>
+
+
+<p> Tecnologias utilizadas </p>
+<img height="40em" src= "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg">
+<img height="40em" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png">
+<img height="40em" src= "https://www.alura.com.br/artigos/assets/html-css-js/imagem-1.png">
+<img height="40em" src= "https://pbs.twimg.com/profile_images/621577553376100352/lvR3kClO_400x400.png">
+<img height="40em" src= "https://res.cloudinary.com/postman/image/upload/t_team_logo/v1629869194/team/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8">
+<img height="40em" src= "https://www.freecodecamp.org/news/content/images/2022/07/git-github.png">
+<img height="40em" src= "[https://www.freecodecamp.org/news/content/images/2022/07/git-github.png](https://www.freecodecamp.org/news/content/images/2022/07/git-github.png)">
+
+<h2> Links do banco de dados: </h2>
+
+<a href="https://portal.azure.com/#@sesisenaispedu.onmicrosoft.com/resource/subscriptions/f4f3d627-717a-440b-9bf9-fb187122fd83/resourceGroups/pizzariaMysql/providers/Microsoft.DBforMySQL/flexibleServers/pizzariamysql/overview"> Azure</a>
 ![vc consegue 00_00_00-00_00_30](https://user-images.githubusercontent.com/42476943/201387944-b77625e9-30d9-4d54-9ea7-ce6e2da951f2.gif)
