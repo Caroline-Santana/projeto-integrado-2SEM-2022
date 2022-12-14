@@ -130,20 +130,20 @@ Para entregar o seu projeto você deverá criar um Pull Request deste repositór
 - [x] O projeto deverá ser publicado.
 
 ## Front-end
-- [ ] Prototipou o site, no figma, conforme requisitos do cliente?
-- [ ] Criou o site seguinto o planejado?
-- [ ] O site é responsivo?
+- [x] Prototipou o site, no figma, conforme requisitos do cliente?
+- [x] Criou o site seguinto o planejado?
+- [x] O site é responsivo?
 - [ ] Os produtos são carregado no site dinamicamente?
 - [ ] O formulário está validando os campos?
 - [ ] O formulário faz o envio para o servidor back-end?
 - [ ] O site foi publicado?
-- [ ] Todas as telas do CMS foram prototipadas?
-- [ ] As telas foram criadas conforme planejado?
-- [ ] A tela de produtos implementa todos os métodos HTTP (get, post, put e delete)?
+- [x] Todas as telas do CMS foram prototipadas?
+- [x] As telas foram criadas conforme planejado?
+- [x] A tela de produtos implementa todos os métodos HTTP (get, post, put e delete)?
 - [ ] A tela de categorias implementa todos os métodos HTTP?
 - [ ] A tela de usuários implementa todos os métodos HTTP?
 - [ ] A tela de contados implementa os métodos HTTP get e delete?
-- [ ] A tela de login faz autenticação utilizando o JWT?
+- [x] A tela de login faz autenticação utilizando o JWT?
 - [ ] O CMS foi publicado?
 
 
@@ -182,3 +182,9 @@ Para entregar o seu projeto você deverá criar um Pull Request deste repositór
 
 
 <a href="https://trello.com/1/cards/637f68f34a4282010f4e76aa/attachments/637f68f34a4282010f4e76c9/previews/637f68f44a4282010f4e778c/download/Captura_de_Tela_2022-11-24_%C3%A0s_09.50.06.png"> Modelo lógico</a>
+
+<h2> Links do Front-End: </h2>
+
+<a href="https://www.figma.com/file/LxV0XLVbkVOwInMDlX0t1x/Pizzaria?node-id=0%3A1&t=p8KDrmDxsLfXe3E1-0">Figma</a>
+<a href="#">Site</a>
+
