@@ -123,11 +123,11 @@ Para entregar o seu projeto você deverá criar um Pull Request deste repositór
 
 # Critérios de Avaliação
 ## Banco de dados
-- [ ] Deverá ser criado o modelo conceitual do projeto.
-- [ ] Deverá ser criado o modelo lógico do banco de dados.
-- [ ] Os scripts para criação do Banco de dados devem ser disponibilizados como um entregável do projeto.
-- [ ] A utilização de recursos como View, Procedures e Functions é uma boa prática que deve ser levado em consideração no processo de desenvolvimento do projeto.
-- [ ] O projeto deverá ser publicado.
+- [x] Deverá ser criado o modelo conceitual do projeto.
+- [x] Deverá ser criado o modelo lógico do banco de dados.
+- [x] Os scripts para criação do Banco de dados devem ser disponibilizados como um entregável do projeto.
+- [x] A utilização de recursos como View, Procedures e Functions é uma boa prática que deve ser levado em consideração no processo de desenvolvimento do projeto.
+- [x] O projeto deverá ser publicado.
 
 ## Front-end
 - [ ] Prototipou o site, no figma, conforme requisitos do cliente?
@@ -173,4 +173,6 @@ Para entregar o seu projeto você deverá criar um Pull Request deste repositór
 <h2> Links do banco de dados: </h2>
 
 <a href="https://portal.azure.com/#@sesisenaispedu.onmicrosoft.com/resource/subscriptions/f4f3d627-717a-440b-9bf9-fb187122fd83/resourceGroups/pizzariaMysql/providers/Microsoft.DBforMySQL/flexibleServers/pizzariamysql/overview"> Azure</a>
-![vc consegue 00_00_00-00_00_30](https://user-images.githubusercontent.com/42476943/201387944-b77625e9-30d9-4d54-9ea7-ce6e2da951f2.gif)
+<a href="https://app.brmodeloweb.com/#!/conceptual/637b55871297569bd05a958f"> Modelo conceitual</a>
+<a href="https://drive.google.com/file/d/1Nltcy25Lr4rm4oKUazDMRDI7HX2tSyj7/view?usp=sharing">Script do banco</a>
+<a href="https://trello.com/1/cards/637f68f34a4282010f4e76aa/attachments/637f68f34a4282010f4e76c9/previews/637f68f44a4282010f4e778c/download/Captura_de_Tela_2022-11-24_%C3%A0s_09.50.06.png"> Modelo lógico</a>
