@@ -186,5 +186,7 @@ Para entregar o seu projeto você deverá criar um Pull Request deste repositór
 <h2> Links do Front-End: </h2>
 
 <a href="https://www.figma.com/file/LxV0XLVbkVOwInMDlX0t1x/Pizzaria?node-id=0%3A1&t=p8KDrmDxsLfXe3E1-0">Figma</a>
+
+
 <a href="#">Site</a>
 
