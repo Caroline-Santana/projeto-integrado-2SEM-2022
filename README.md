@@ -144,7 +144,7 @@ Para entregar o seu projeto você deverá criar um Pull Request deste repositór
 - [ ] A tela de usuários implementa todos os métodos HTTP?
 - [ ] A tela de contados implementa os métodos HTTP get e delete?
 - [x] A tela de login faz autenticação utilizando o JWT?
-- [ ] O CMS foi publicado?
+- [x] O CMS foi publicado?
 
 
 ## Back-end
