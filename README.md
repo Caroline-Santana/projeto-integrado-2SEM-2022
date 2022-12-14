@@ -173,6 +173,12 @@ Para entregar o seu projeto você deverá criar um Pull Request deste repositór
 <h2> Links do banco de dados: </h2>
 
 <a href="https://portal.azure.com/#@sesisenaispedu.onmicrosoft.com/resource/subscriptions/f4f3d627-717a-440b-9bf9-fb187122fd83/resourceGroups/pizzariaMysql/providers/Microsoft.DBforMySQL/flexibleServers/pizzariamysql/overview"> Azure</a>
+
+
 <a href="https://app.brmodeloweb.com/#!/conceptual/637b55871297569bd05a958f"> Modelo conceitual</a>
+
+
 <a href="https://drive.google.com/file/d/1Nltcy25Lr4rm4oKUazDMRDI7HX2tSyj7/view?usp=sharing">Script do banco</a>
+
+
 <a href="https://trello.com/1/cards/637f68f34a4282010f4e76aa/attachments/637f68f34a4282010f4e76c9/previews/637f68f44a4282010f4e778c/download/Captura_de_Tela_2022-11-24_%C3%A0s_09.50.06.png"> Modelo lógico</a>
